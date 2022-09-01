@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Encode+Sans+Condensed:wght@600;900&family=Noto+Serif&display=swap');
+
+:root {
+    --page-width: 74rem;
+}
+
+body {
+    /* position: fixed; */
+    margin: 0;
+    background-color: mistyrose;
+    font-family: 'Noto Serif', serif;
+    word-break: break-word;
+}
+
+header {
+    background-color: #d73f09;
+}
+
+.right-icons > i {
+    position: absolute;
+    top: 2.2rem;
+    right: 0;
+    padding: 0;
+    width: max-content;
+    margin-right: 1rem;
+    color: white;
+}
+
+.right-icons > i:hover {
+    color: #242424;
+}
+
+.header-items {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    flex-flow: row wrap;
+    padding-right: 4rem;
+}
+
+.right-group {
+    margin-left: auto;
+}
+
+.right-group-text {
+    display: flex;
+    flex-flow: row wrap;
+    justify-self: end;
+    justify-items: end;
+}
+
+.right-group-text > h3 {
+    color: white;
+    padding: 0 1rem 0 1rem;
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-weight: 600;
+}
+
+.right-group-text > h3 > * {
+    color: inherit;
+    text-decoration: none;
+}
+
+.right-group-text > h3:not(:last-of-type) {
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.logo {
+    display: block !important;
+    width: 70px;
+    height: auto;
+    padding: .5rem 0 .25rem;
+}
+
+.logo-text {
+    font-weight: 100;
+    font-size: 2.5ch;
+    color:white;
+    /* min-width: max-content; */
+}
+
+.wrapper {
+    max-width: var(--page-width);
+    margin: 0 auto 0 auto
+}
+
+.subheader {
+    background-color: white;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .15), 0 4px 8px rgba(0, 0, 0, .1);
+    position: relative;
+    display: block;
+    flex-direction: row;
+}
+
+.subheader-links {
+    margin: 0 1rem;
+    padding: .5rem 0;
+}
+
+.subheader-link-parent {
+    color: #c03401;
+    display: inline-block;
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-size: large;
+    position: relative;
+}
+
+.subheader-links > div:not(:last-child) > h3  {
+    padding: 0 1rem 0 0;
+    border-right: 1px solid rgba(119, 136, 153, 0.5);
+}
+
+.subheader-links > div:not(:first-child) > h3  {
+    padding-left: .5rem;
+}
+
+.subheader-link-parent > h3 > a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.subheader-link-parent > h3:hover + .subheader-link-child,
+.subheader-link-child:hover {
+    display: block;
+}
+
+.subheader-link-child::before {
+    content: "";
+    height: 1rem;
+    width: 15ch;
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    top: -1rem;
+    z-index: -1;
+}
+
+.subheader-link-child {
+    background-color: white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .3), 0 0 10px rgba(0, 0, 0, .15);
+    border-top: 3px solid #c03401;
+    display: none;
+    position: absolute;
+    left: -1rem;
+    top: 4rem;
+    padding: .5rem;
+    width: 25ch;
+    z-index: 1;
+}
+
+.subheader-link-child > p {
+    padding: 5px;
+    margin: 0 .5rem .5rem .5rem;
+}
+
+.subheader-link-child > p:hover {
+    background-color: rgba(85, 85, 85, 0.15);
+}
+
+.subheader-link-child > p:last-of-type {
+    margin-bottom: 5px;
+}
+
+.subheader-link-child > img {
+    width: 100%;
+}
+
+.name-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.name-wrapper > img {
+    margin: 0 1.5rem 0 1rem;
+}
+
+.inner {
+    margin: 0 1rem;
+}
+
+.hero-container {
+    position: relative
+}
+
+.hero-image {
+    display: block;
+    background-image: url("../images/repeatable-treeline.png"), url("../images/anatomy.jpg");
+    background-position: bottom center, center center;
+    background-repeat: repeat-x, no-repeat;
+    width: 100%;
+    height: auto;
+    background-size: 400px, cover;
+}
+
+.hero-content {
+    padding-left: 2rem;
+    position: relative;
+    padding-bottom: 5rem;
+}
+
+.hero-content h1 {
+    color: #d73f09;
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-size: xxx-large;
+}
+
+.hero-content hr {
+    border: none;
+    background-color: #d73f09;
+    clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+    height: 10px;
+    width: 10rem;
+    position: relative;
+    margin: 0;
+}
+
+.hero-content p {
+    max-width: 50ch;
+    background-color: #fff5;
+    outline: 1ch solid #fff5;
+    border-radius: 2px;
+}
+
+.hero-hashtag {
+    background-color: #d73f09;
+    color: white;
+    clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
+    font-style: italic;
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    padding: 4px 2rem 4px 1rem;
+}
+
+.quick-links {
+    margin-top: -20px;
+}
+
+.quick-links-bar {
+    background-color: white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .5);
+    display: flex;
+    padding: 2rem 1rem 1rem;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.quick-links-bar > div {
+    display: flex;
+    text-align: center;
+    flex-flow: column;
+}
+
+.quick-links-bar > div > div > img {
+    padding: 0 1rem;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.quick-link {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.body-quick-links > div > p {
+    color: #d73f09;
+    font-family: 'Comic Neue', cursive;
+    font-weight: 700;
+    font-size: large;
+    margin: 10px 0 0;
+    text-align: center;
+}
+
+.body-background {
+    background: url("../images/weatherford.jpg") rgba(0, 0, 0, 0.5);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+}
+
+.body-news {
+    margin-top: 0;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.body-news > h2 {
+    position: relative;;
+    color: white;
+    margin: 0 0 1rem;
+}
+
+.body-news > h2::before {
+    position: absolute;
+    left: 5rem;
+    bottom: 1rem;
+    content: "";
+    height: 1px;
+    width: calc(50% - 12rem);
+    background-color: #a8a8a8;
+}
+
+.body-news > h2::after {
+    position: absolute;
+    right: 5rem;
+    bottom: 1rem;
+    content: "";
+    height: 1px;
+    width: calc(50% - 12rem);
+    background-color: #a8a8a8;
+}
+
+.news-articles {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+
+.news-articles > article {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+    display: flex;
+    flex-flow: column;
+    min-width: 10rem;
+    width: 19rem;
+    margin: 0 1rem 2rem;
+    min-height: 30rem;
+    padding-bottom: 1rem ;
+    text-align: left;
+}
+
+.news-articles > article > img {
+    height: 10rem;
+    object-fit: cover;
+}
+
+.news-article-text > h4 {
+    color: #6e6e6e;
+    font-family: 'Comic Neue', cursive;
+    margin: 1rem 0 0;
+    padding-left: 1.25rem;
+}
+
+.news-article-text > h3 {
+    color: #c03401;
+    text-transform: capitalize;
+}
+
+.button {
+    background-color: aliceblue;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+    color: black;
+    font-family: '';
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: capitalize;
+    position: relative;
+    width: 14ch;
+    margin: 3rem 1rem 0;
+    padding: 10px 18px;
+}
+
+.button::after {
+    content: "";
+    background-color: #d73f09;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .6);
+    position: absolute;
+    width: 45px;
+    height: 100%;
+    bottom: 0;
+    right: -45px;
+}
+
+.button::before {
+    content: "";
+    background-color: #0004;
+    background: no-repeat center/50% url("../images/arrow.svg");
+    position: absolute;
+    width: 45px;
+    height: 100%;
+    bottom: 0;
+    right: -45px;
+    z-index: 1;
+}
+
+.news-article-text > h3,
+.news-article-text > p{
+    margin: .5rem 0;
+    padding: 0 1rem;
+}
+
+.fast-facts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    align-content: start;
+    text-align: center;
+    position: relative;
+    background-color: mistyrose;
+}
+
+.fast-fact-title {
+    color: white;
+    font-size: smaller;
+    background-color: #d73f09;
+    padding: 10px 40px;
+    width: fit-content;
+    justify-self: center;
+    margin-bottom: 2rem;
+}
+
+.fast-fact-title > h2 {
+    margin: 0;
+}
+
+.fact-row {
+    width: 30rem;
+}
+
+.fact-row {
+    margin: 0 3rem 4rem;
+}
+
+.fast-facts img {
+    width: 10rem;
+    float: left;
+    margin-right: 1rem;
+}
+
+footer {
+    height: 15rem;
+    background-color: #242424;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    padding-bottom: 10rem;
+}
+
+footer > h3 {
+    font-weight: 100;
+}
+
+footer > hr {
+    width: 4.5rem;
+    border: none;
+    border-top: 1px solid;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+footer > p {
+    font-family: 'Comic Neue', cursive;
+}
+
+.margin-more {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: 'Comic Neue', cursive;
+}
+
+.footer-links > p {
+    margin: 1ch;
+}
+
+.footer-links > p:not(:last-child) {
+    padding: 0 1rem 0 0;
+    border-right: 1px solid rgba(119, 136, 153, 0.5);
+}
+
+.copyright {
+    font-size: small;
+    font-family: 'Comic Neue', cursive;
+}
