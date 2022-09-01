@@ -26,8 +26,10 @@ header {
     color: white;
 }
 
+a:hover,
 .right-icons > i:hover {
-    color: #242424;
+    color: #B0B0B0 !important;
+    text-shadow: 0 0 2px rgba(82, 80, 80, 0.3);
 }
 
 .header-items {
@@ -366,6 +368,18 @@ header {
     padding: 10px 18px;
 }
 
+.button::before {
+    content: "";
+    background-color: #0004;
+    background: no-repeat center/50% url("../images/arrow.svg");
+    position: absolute;
+    width: 45px;
+    height: 100%;
+    bottom: 0;
+    right: -45px;
+    z-index: 1;
+}
+
 .button::after {
     content: "";
     background-color: #d73f09;
@@ -377,16 +391,8 @@ header {
     right: -45px;
 }
 
-.button::before {
-    content: "";
-    background-color: #0004;
-    background: no-repeat center/50% url("../images/arrow.svg");
-    position: absolute;
-    width: 45px;
-    height: 100%;
-    bottom: 0;
-    right: -45px;
-    z-index: 1;
+.button:hover::after {
+    background-color: #e6460d;
 }
 
 .news-article-text > h3,
